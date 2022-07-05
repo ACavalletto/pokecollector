@@ -1,13 +1,5 @@
 from django.shortcuts import render
-
-# Classes
-class Card:
-    def __init__(self, name, id, generation, type, evolution_stage):
-        self.name = name
-        self.id = id
-        self.generation = generation
-        self.type = type
-        self.evolution_stage = evolution_stage
+from .models import Card
 
 cards = [
     Card('Alakazam', 1, 'gen1', 'psychic', 'stage 3'),
@@ -23,4 +15,5 @@ def about(request):
     return render(request, 'about.html')
 
 def cards_index(request):
+    cards = Card.objects.all()
     return render(request, 'cards/index.html', {'cards': cards})
