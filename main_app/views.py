@@ -17,3 +17,7 @@ def about(request):
 def cards_index(request):
     cards = Card.objects.all()
     return render(request, 'cards/index.html', {'cards': cards})
+
+def card_detail(request, card_id):
+    card = Card.objects.get(id=card_id)
+    return render(request, 'cards/detail.html', {'card': card})
