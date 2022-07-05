@@ -10,7 +10,7 @@ class Card:
         self.evolution_stage = evolution_stage
 
 cards = [
-    Card('Alakazam', 1, 'gen1', 'pyschic', 'stage 3'),
+    Card('Alakazam', 1, 'gen1', 'psychic', 'stage 3'),
     Card('Blastoise', 2, 'gen1', 'water', 'stage 3'),
     Card('Charizard', 4, 'gen1', 'fire', 'stage 3'),
 ]

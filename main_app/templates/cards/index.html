@@ -8,11 +8,11 @@
         <span class="card-title">{{ card.name }}</span>
         <p>ID: {{card.id}}</p>
         <p>Generation: {{card.generation}}</p>
-        {% if card.type == 'psychic' %}
+        {% if card.type == "psychic" %}
         <p class="psychic">Type: {{card.type}}</p>
-        {% elif card.type == 'fire' %}
+        {% elif card.type == "fire" %}
         <p class="fire">Type: {{card.type}}</p>
-        {% elif card.type == 'water' %}
+        {% elif card.type == "water" %}
         <p class="water">Type: {{card.type}}</p>
         {% endif %}
     </div>
