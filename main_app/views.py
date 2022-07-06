@@ -1,11 +1,10 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Card
 
-cards = [
-    Card('Alakazam', 1, 'gen1', 'psychic', 'stage 3'),
-    Card('Blastoise', 2, 'gen1', 'water', 'stage 3'),
-    Card('Charizard', 4, 'gen1', 'fire', 'stage 3'),
-]
+class CardCreate(CreateView):
+    model=Card
+    fields ='__all__'
 
 # Create your views here.
 def home(request):
