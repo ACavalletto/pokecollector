@@ -14,5 +14,9 @@
         <p class="water">Type: {{card.type}}</p>
         {% endif %}
     </div>
+    <div class="'card-action">
+        <a href="{% url 'card_update' card.id %}">Edit</a>
+        <a href="{% url 'card_delete' card.id %}">Delete</a>
+    </div>
 </div>
 {% endblock %}
